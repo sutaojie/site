@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2018 by sutaojie (http://js.jirengu.com/kizuq/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>高度过度</title>
+<style id="jsbin-css">
+.el{
+  transition: max-height 4s;/*定时*/
+  overflow:hidden;  /*防止隐藏元素溢出*/
+  /* border:1px solid transparemt; */
+  max-height:0;  /*指定最初高度为0*/
+}
+.trigger:hover > .el{
+  max-height:var(--max-height);
+}  /*得到变量*/
+</style>
+</head>
+<body>
+  <div class="trigger">
+    Hover me to see a height transition.
+    <div class="el">content</div>
+  </div>
+<script id="jsbin-javascript">
+var el = querySelect('.el');
+var height = el.scrollHeight;/*得到溢出的高度*/
+el.style.setProperty('--max-height',height+'px'); /*设置变量*/
+</script>
+</body>
+</html>
