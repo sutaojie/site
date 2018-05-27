@@ -1,0 +1,15 @@
+*{margin:0;padding:0;}
+a{text-decoration:none;color:inherit;}
+.clear::after{content:'';display:block;clear:both;}
+.nav{position:fixed;border:1px solid red;height:80px;width:100%;background:rgba(255,255,255,0.3);}
+.logo,.nav-meun-bar >ul > li{margin-top:20px;}
+.logo{border:1px solid red;display:inline-block;font-size: 1.3rem;margin-left: 25px;}
+.nav > .logo > .su, .nav > .logo > .taojie{font-family: '-webkit-pictograph';font-weight: bold;color:#5C8ECD;}
+.su{}
+.taojie{margin-left: -3px;}
+.nav-meun-bar{float:right;height:inherit;}
+.nav-meun-bar > ul{height:inherit;border:1px solid red;}
+.nav-meun-bar > ul > li{list-style:none;float:left;font-size:1.2rem;}
+.nav-meun-bar > ul > li > a{margin-right:1rem;border:1px solid red;font-weight:bold;color:#ffe;}
+.nav-background-image{border:1px solid red;background: url('bg.png');background-size: cover;height:450px;}
+.nav-background-image::after{content:'';display:block;background-color: rgba(0,0,0,0.5);height: 450px;border:1px solid red;}
